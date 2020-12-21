@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+<body>
+    <div class="wrapper">
+        <h2>Cinematic Universe Survey</h2>
+        <h5>Understanding the Demography of varrious cinematic universes</h5>
+        <div class="input-group">
+            <div class="input-box">
+                <input type="text" placeholder="Full Name" class="name">
+                <i class="fa fa-user icon"></i>
+            </div>
+            <div class="input-box">
+                <input type="number" placeholder="Age" class="name" min="10" max="">
+                <i class="fa fa-user icon"></i>
+            </div>
+        </div>
+        <div class="input-group">
+            <div class="input-box">
+                <input type="email" placeholder="Email" class="name">
+                <i class="fa fa-envelope icon"></i>
+            </div>
+        </div>
+        <div class="input-group">
+            <div class="input-box">
+                <h4>Preferred Universe</h4>
+                <input type="radio" class="radio" id="MCU" name="gender" checked>
+                <label for="MCU">MCU</label>
+                <input type="radio" class="radio" id="DCEU" name="gender">
+                <label for="DCEU">DCEU</label>
+                <input type="radio" class="radio" id="disney" name="gender">
+                <label for="disney">Disney</label>
+                <input type="radio" class="radio" id="mv" name="gender">
+                <label for="mv">MonsterVerse</label>
+            </div>
+        </div>
+        <div class="input-group" id="cc">
+            <div class="input-box">
+                <h4>Where do you source your entertainment</h4>
+                <input type="checkbox" name="medium" id="c" class="check">
+                <label for="c">Comics</label>
+                <input type="checkbox" name="medium" id="m" class="check">
+                <label for="m">Movies</label>
+                <input type="checkbox" name="medium" id="tv" class="check">
+                <label for="tv">TV Shows</label>
+                <input type="checkbox" name="medium" id="ws" class="check">
+                <label for="ws">Webseries</label>
+            </div>
+        </div>
+        <div class="input-group" id="cvv">
+            <div class="input-box">
+                <h4>Reasons for your preference</h4>
+                <textarea name="" id="" cols="53" rows="5" class="name"></textarea>
+            </div>
+        </div>
+        <div class="input-group">
+            <div class="input-box">
+                <button type="submit">Contribute</button>
+            </div>
+        </div>
+    </div>
+</html>
