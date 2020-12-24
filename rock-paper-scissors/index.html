@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let choices = ['rock','paper','scissors'];
+        let result ='';
+        function computerPlay(){
+            return choices[Math.floor(Math.random()*choices.length)];
+        }
+        function playRound(playerSelection, computerSelection){
+            if(playerSelection.charAt(0)=='r'||playerSelection.charAt(0)=='R')
+            {
+                playerSelection = 'rock';
+            }
+            else if(playerSelection.charAt(0)=='p'||playerSelection.charAt(0)=='P')
+            {
+                playerSelection = 'paper';
+            }
+            else if(playerSelection.charAt(0)=='s'||playerSelection.charAt(0)=='S')
+            {
+                playerSelection = 'scissors';
+            }
+            else
+            {
+                console.log('Pick valid choice');
+            }
+            if(playerSelection=='rock')
+            {
+                if(computerSelection=='rock')
+                {
+                    result='Draw';
+                }
+                else if(computerSelection=='paper')
+                {
+                    result='Lose';
+                    computerScore+=1;
+                }
+                else{
+                    result='Win';
+                    playerScore+=1;
+                }
+            }
+            else if(playerSelection=='paper')
+            {
+                if(computerSelection=='rock')
+                {
+                    result='Win';
+                    playerScore+=1;
+                }
+                else if(computerSelection=='paper')
+                {
+                    result='Draw';
+                }
+                else{
+                    result='Lose';
+                    computerScore+=1;
+                }
+            }
+            else
+            {
+                if(computerSelection=='rock')
+                {
+                    result='Lose';
+                    computerScore+=1;
+                }
+                else if(computerSelection=='paper')
+                {
+                    result='Win';
+                    playerScore+=1;
+                }
+                else{
+                    result='Draw';
+                }
+            }
+            return result;
+        }
+        let playerScore = 0;
+        let computerScore = 0;
+        function game(){
+            let count = 1;
+            while(playerScore<5&&computerScore<5)
+            {
+                let playerSelection=prompt('Choice');
+                let computerSelection=computerPlay();
+                let result1 = playRound(playerSelection,computerSelection);
+                console.log(`Round:${count} ${result1}`);
+                count++;
+            }
+            if(playerScore<computerScore)
+            {
+                console.log('You lost the game');
+            }
+            else
+            {
+                console.log('You won the game');
+            }
+        }
+        game();
+    </script>
+</body>
+</html>
