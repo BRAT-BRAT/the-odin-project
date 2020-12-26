@@ -3,104 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer></script>
 </head>
 <body>
-    <script>
-        let choices = ['rock','paper','scissors'];
-        let result ='';
-        function computerPlay(){
-            return choices[Math.floor(Math.random()*choices.length)];
-        }
-        function playRound(playerSelection, computerSelection){
-            if(playerSelection.charAt(0)=='r'||playerSelection.charAt(0)=='R')
-            {
-                playerSelection = 'rock';
-            }
-            else if(playerSelection.charAt(0)=='p'||playerSelection.charAt(0)=='P')
-            {
-                playerSelection = 'paper';
-            }
-            else if(playerSelection.charAt(0)=='s'||playerSelection.charAt(0)=='S')
-            {
-                playerSelection = 'scissors';
-            }
-            else
-            {
-                console.log('Pick valid choice');
-            }
-            if(playerSelection=='rock')
-            {
-                if(computerSelection=='rock')
-                {
-                    result='Draw';
-                }
-                else if(computerSelection=='paper')
-                {
-                    result='Lose';
-                    computerScore+=1;
-                }
-                else{
-                    result='Win';
-                    playerScore+=1;
-                }
-            }
-            else if(playerSelection=='paper')
-            {
-                if(computerSelection=='rock')
-                {
-                    result='Win';
-                    playerScore+=1;
-                }
-                else if(computerSelection=='paper')
-                {
-                    result='Draw';
-                }
-                else{
-                    result='Lose';
-                    computerScore+=1;
-                }
-            }
-            else
-            {
-                if(computerSelection=='rock')
-                {
-                    result='Lose';
-                    computerScore+=1;
-                }
-                else if(computerSelection=='paper')
-                {
-                    result='Win';
-                    playerScore+=1;
-                }
-                else{
-                    result='Draw';
-                }
-            }
-            return result;
-        }
-        let playerScore = 0;
-        let computerScore = 0;
-        function game(){
-            let count = 1;
-            while(playerScore<5&&computerScore<5)
-            {
-                let playerSelection=prompt('Choice');
-                let computerSelection=computerPlay();
-                let result1 = playRound(playerSelection,computerSelection);
-                console.log(`Round:${count} ${result1}`);
-                count++;
-            }
-            if(playerScore<computerScore)
-            {
-                console.log('You lost the game');
-            }
-            else
-            {
-                console.log('You won the game');
-            }
-        }
-        game();
-    </script>
+    <div class="container">
+        <header>
+            <div id="playername">
+                <h1>Hello</h1>
+            </div>
+            <h3>Let's play a game</h3>
+        </header>
+        <div id="main">
+            <div id="input">
+                <h3>Choose your weapon</h3>
+                <div id="inputOptions">
+                    <div id="rock" class="options">
+                        <img src="./images/rock.png" width="100" alt="Rock">
+                    </div>
+                    <div id="paper" class="options">
+                        <img src="./images/paper.png" width="100" alt="Paper">
+                    </div>
+                    <div id="scissors" class="options">
+                        <img src="./images/scissors.png" width="100" alt="Scissors">
+                    </div>
+                </div>
+            </div>
+            <div id="score">
+                <div id="yourScore">
+                    <h3>Your Score:</h3>
+                    <div id="playerscore">
+                        <p id="ys">0</p>
+                    </div>
+                </div>
+                <div id="opponentScore">
+                    <h3>Opponent's Score:</h3>
+                    <div id="computerscore">
+                        <p id="cs">0</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h2>
+
+                </h2>
+            </div>
+            <button onclick="window.location.reload()">Play Again</button>
+            <div id="result">
+            </div>
+        </div>
+    </div>
 </body>
 </html>

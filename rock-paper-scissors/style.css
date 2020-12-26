@@ -1,0 +1,121 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica, sans-serif;
+    color: white;
+}
+
+body{
+    background-color: black;
+}
+
+header{
+    height: 150px;
+    margin-top: 50px;
+}
+
+h1{
+    text-align: center;
+    font-size: 3rem;
+    padding: 20px;
+}
+
+header h3{
+    text-align: center;
+}
+
+#input{
+    width: 100%;
+    /* background-color: blue; */
+    padding: 50px;
+}
+
+#input h3{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#inputOptions{
+    width: 60%;
+    margin: auto;
+    /* background-color: brown; */
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+.options{
+    /* background-color: black; */
+    border: 3px solid white;
+    padding: 50px;
+    /* cursor: pointer; */
+}
+
+
+#score{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 200px 200px 1fr;
+    grid-template-rows: 1fr 10px;
+    grid-template-areas: 
+    ". ys os ."
+    ". . . .";
+    /* border: 1px solid white; */
+    padding: 10px;
+}
+
+#yourScore{
+    grid-area: ys;
+    margin: 10px;
+    text-align: center;
+    /* border: 1px solid white; */
+    height: 200px;
+}
+
+#opponentScore{
+    grid-area: os;
+    margin: 10px;
+    text-align: center;
+    /* border: 1px solid white; */
+    height: 200px;
+}
+
+#playerscore, #computerscore{
+    font-size: 4rem;
+    height: 80%;
+    width: 80%;
+    justify-self: center;
+    /* border: 1px solid rgb(156, 149, 149); */
+    margin-left: 10%;
+    border-radius: 5px;
+}
+
+button{
+    display: block;
+    background-color: black;
+    margin: 0 auto;
+    border: 1px solid white;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+h2{
+    text-align: center;
+}
+
+
+.result{
+    display: block;
+    border: 1px solid white;
+    z-index: 98;
+    top: 2vh;
+    left: 15vw;
+    position: fixed;
+    height: 92.5vh;
+    width: 70vw;
+    text-align: center;
+    background-color: black;
+    font-size: 6rem;
+    padding-top: 40vh;
+}
