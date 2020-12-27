@@ -1,0 +1,158 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Lobster', cursive;
+}
+
+body{
+    background-color: #666666;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 80px 1fr 100px;
+    grid-template-areas: 
+    "header ."
+    "controls gridContainer"
+    ". .";
+}
+
+.header{
+    grid-area: header;
+    text-align: right;
+}
+
+.header h1{
+    margin-right: 6vw;
+    margin-top: 3vh;
+    font-size: 3rem;
+    font-family: 'Hanalei Fill', cursive;
+}
+
+.gridContainer{
+    grid-area: gridContainer;
+}
+
+.controlsContainer{
+    grid-area: controls;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+#clear{
+    width: 8vw;
+    padding: 10px;
+    font-size: 1.3rem;
+    border-radius: 10px;
+    border: none;
+    color: black;
+    background-color: white;
+    margin-left: 36vw;
+}
+
+#clear:hover{
+    box-shadow: 0 0 10px 10px rgb(75, 71, 71);
+    text-shadow: 0 0 5px 5px rgb(240, 234, 234);
+    color: white;
+    border: none;
+}
+
+
+#pixels{
+    width: 8vw;
+    margin-left: 36vw;
+    border-radius: 10px;
+    /* height: 25vh; */
+    font-size: 1.5rem;
+}
+
+#pixels + label{
+    font-size: 2rem;
+    margin-left: 30vw;
+    margin-top: -5vw;
+}
+
+#color-picker{
+    display: flex;
+    flex-direction: column;
+}
+
+
+#color-picker input{
+    display: none;
+}
+
+#color-picker label{
+    display: block;
+    width: 8vw;
+    height: 4vh;
+    margin-left: 36vw;
+    text-align: center;
+    padding: 6px 0;
+}
+
+#color-picker label:first-of-type{
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+#color-picker label:last-of-type{
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+#black-label{
+    background-color:white;
+    color:black;
+    font-size: 1.3rem;
+}
+
+#black:checked + label{
+    background-color: black;
+    color: white;
+}
+
+#blue:checked + label{
+    background-color: blue;
+    color: white;
+}
+
+#red:checked + label{
+    background-color: red;
+    color: white;
+}
+
+#green:checked + label{
+    background-color: rgb(11, 180, 11);
+    color: white;
+}
+
+#blue-label{
+    background-color: white;
+    color: blue;
+    font-size: 1.3rem;
+}
+
+#red-label{
+    background-color: white;
+    color: red;
+    font-size: 1.3rem;
+}
+
+#green-label{
+    background-color: white;
+    color: rgb(11, 180, 11);
+    font-size: 1.3rem;
+}
+
+#grid{
+    width: 42vw;
+    height: 42vw;
+    margin-left: 4vw;
+    background-color: white ;
+    border: 10px solid black;
+    display: grid;
+}
+

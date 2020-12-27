@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etch A Sketch</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Hanalei+Fill&family=Lobster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer></script>
+</head>
+<body>
+    <div class="header">
+        <h1>Etch - a - Sketch</h1>
+    </div>
+    <div class="controlsContainer">
+        <button id="clear">Clear</button>
+        <div class="rangeselection">
+            <input type="range" min="1" max="300" id="pixels" value="64">
+            <label for="">Hit clear after changing value</label>
+        </div>
+        <div id="color-picker">
+            <input type="radio" name="color" value="black" id="black" checked>
+            <label for="black" id="black-label">Black</label>
+            <input type="radio" name="color" value="red" id="red">
+            <label for="red" id="red-label">Red</label>
+            <input type="radio" name="color" value="green" id="green">
+            <label for="green" id="green-label">Green</label>
+            <input type="radio" name="color" value="blue" id="blue">
+            <label for="blue" id="blue-label">Blue</label>
+        </div>
+    </div>
+    <div class="gridContainer">
+        <div class="grid" id="grid"></div>
+    </div>
+</body>
+</html>
